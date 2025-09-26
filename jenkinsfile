@@ -1,17 +1,1 @@
-pipeline {
-    agent any
-    stages {
-        stage('Build') {
-            steps {
-                echo "Building branch: ${env.BRANCH_NAME}"
-                sh 'mvn clean package'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo "Running tests on branch: ${env.BRANCH_NAME}"
-                sh 'mvn test'
-            }
-        }
-    }
-}
+
